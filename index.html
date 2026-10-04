@@ -5,18 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>One Place Real Estate</title>
 <meta name="description" content="One Place Real Estate & Gen. Maint. — building cleaning, maintenance, leasing & management and real estate consultancy in the UAE.">
-<meta name="theme-color" content="#0a2622">
+<meta name="theme-color" content="#2b2d31">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Manrope:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap">
 <style>
-/* Palette: midnight emerald + champagne gold on warm ivory */
+/* Palette: charcoal grey + sky blue + white (matches business card) */
 :root{
-  --night:#0a2622; --night-2:#0f332d; --night-3:#164139;
-  --gold:#d4a857; --gold-2:#e8c987; --gold-deep:#a97f2f;
-  --ivory:#f7f3ec; --sand:#efe7d9; --card:#ffffff;
-  --ink:#14211e; --muted:#5f6b67; --line:#e2d9c8; --line-dark:rgba(255,255,255,.12);
-  --serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --night:#2b2d31; --night-2:#35383d; --night-3:#44474d;
+  --gold:#4a90e2; --gold-2:#7db4f0; --gold-deep:#1f6fd1;
+  --ivory:#f4f6f9; --sand:#e8edf3; --card:#ffffff;
+  --ink:#1d2025; --muted:#5d646e; --line:#dbe2ea; --line-dark:rgba(255,255,255,.12);
+  --serif:"Oswald","Arial Narrow",Impact,sans-serif;
   --sans:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
   --r:18px; --r-sm:10px;
   color-scheme:light;
@@ -25,10 +25,11 @@
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--ivory);color:var(--ink);font-family:var(--sans);font-size:1rem;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 .wrap{max-width:1200px;margin:0 auto;padding-inline:clamp(16px,4vw,40px)}
-h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.05;margin:0;letter-spacing:-.015em;text-wrap:balance}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.08;margin:0;letter-spacing:.005em;text-transform:uppercase;text-wrap:balance}
 p{margin:0}
 a{color:inherit}
-em{font-style:italic;color:var(--gold)}
+em{font-style:normal;color:var(--gold)}
+.on-dark em,.svc.dark em{color:var(--gold-2)}
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
 .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.75rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep)}
 .eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
@@ -37,8 +38,8 @@ em{font-style:italic;color:var(--gold)}
 /* Buttons */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:.9rem 1.5rem;border-radius:999px;font:inherit;font-weight:700;font-size:.95rem;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .2s ease,background .2s ease,box-shadow .2s ease,border-color .2s ease;white-space:nowrap}
 .btn svg{width:18px;height:18px;flex:none}
-.btn-gold{background:linear-gradient(135deg,var(--gold-2),var(--gold) 55%,var(--gold-deep));color:var(--night);box-shadow:0 10px 30px -10px rgba(212,168,87,.7)}
-.btn-gold:hover{transform:translateY(-2px);box-shadow:0 16px 36px -12px rgba(212,168,87,.85)}
+.btn-gold{background:linear-gradient(135deg,var(--gold-2),var(--gold) 50%,var(--gold-deep));color:#fff;box-shadow:0 10px 30px -10px rgba(74,144,226,.7)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 16px 36px -12px rgba(74,144,226,.85)}
 .btn-glass{background:rgba(255,255,255,.06);color:#fff;border-color:rgba(255,255,255,.22);backdrop-filter:blur(8px)}
 .btn-glass:hover{border-color:var(--gold);color:var(--gold-2)}
 .btn-dark{background:var(--night);color:#fff}
@@ -48,11 +49,11 @@ em{font-style:italic;color:var(--gold)}
 
 /* Header */
 header.top{position:fixed;inset:0 0 auto;z-index:30;padding-top:env(safe-area-inset-top,0px);transition:background .3s ease,box-shadow .3s ease,backdrop-filter .3s ease}
-header.top.scrolled{background:rgba(10,38,34,.86);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line-dark)}
+header.top.scrolled{background:rgba(43,45,49,.86);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line-dark)}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:16px;color:#fff}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
 .logo-mark{flex:none;display:block}
-.brand-name{font-family:var(--serif);font-weight:600;font-size:1.45rem;line-height:1;letter-spacing:-.01em}
+.brand-name{font-family:var(--serif);font-weight:600;text-transform:uppercase;font-size:1.45rem;line-height:1;letter-spacing:-.01em}
 .brand-name small{display:block;margin-top:5px;font-family:var(--sans);font-weight:600;font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-2);opacity:.9}
 .nav-links{display:flex;gap:32px;font-weight:600;font-size:.92rem}
 .nav-links a{text-decoration:none;color:rgba(255,255,255,.75);position:relative;padding-block:4px}
@@ -63,7 +64,7 @@ header.top.scrolled{background:rgba(10,38,34,.86);backdrop-filter:blur(14px);box
 @media (max-width:440px){.brand-name{font-size:1.2rem}.brand-name small{font-size:.5rem;letter-spacing:.08em}.nav .btn{padding:.65rem .95rem;font-size:.82rem}}
 
 /* Hero */
-.hero{position:relative;background:radial-gradient(1200px 600px at 85% 10%,rgba(212,168,87,.22),transparent 60%),radial-gradient(900px 500px at 0% 100%,rgba(22,65,57,.9),transparent 70%),linear-gradient(180deg,#071c19 0%,var(--night) 55%,var(--night-2) 100%);color:#fff;overflow:hidden;isolation:isolate}
+.hero{position:relative;background:radial-gradient(1200px 600px at 85% 10%,rgba(74,144,226,.22),transparent 60%),radial-gradient(900px 500px at 0% 100%,rgba(68,71,77,.9),transparent 70%),linear-gradient(180deg,#1f2124 0%,var(--night) 55%,var(--night-2) 100%);color:#fff;overflow:hidden;isolation:isolate}
 .hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse at 50% 30%,#000 30%,transparent 75%);z-index:-1}
 .hero canvas{position:absolute;left:0;right:0;bottom:0;width:100%;height:46%;z-index:-1;pointer-events:none}
 .hero-inner{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(28px,5vw,64px);align-items:center;padding-top:clamp(120px,16vw,170px);padding-bottom:clamp(160px,20vw,240px)}
@@ -76,7 +77,7 @@ header.top.scrolled{background:rgba(10,38,34,.86);backdrop-filter:blur(14px);box
 .hero-card h2{font-size:1.15rem;font-weight:600;color:var(--gold-2);margin-bottom:8px;font-family:var(--sans);letter-spacing:.02em}
 .hero-card a{display:flex;align-items:center;gap:14px;padding:12px;border-radius:var(--r-sm);text-decoration:none;transition:background .2s ease}
 .hero-card a:hover{background:rgba(255,255,255,.07)}
-.hero-card .ic{flex:none;width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:rgba(212,168,87,.14);color:var(--gold-2)}
+.hero-card .ic{flex:none;width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:rgba(74,144,226,.14);color:var(--gold-2)}
 .hero-card .ic svg{width:22px;height:22px}
 .hero-card b{display:block;font-size:.95rem}
 .hero-card span{font-size:.8rem;color:rgba(255,255,255,.6)}
@@ -86,7 +87,7 @@ header.top.scrolled{background:rgba(10,38,34,.86);backdrop-filter:blur(14px);box
 
 /* Stats bar overlapping hero */
 .stats{position:relative;z-index:2;margin-top:-72px}
-.stats-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:var(--card);border-radius:var(--r);box-shadow:0 30px 60px -30px rgba(10,38,34,.35);border:1px solid var(--line);overflow:hidden}
+.stats-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:var(--card);border-radius:var(--r);box-shadow:0 30px 60px -30px rgba(43,45,49,.35);border:1px solid var(--line);overflow:hidden}
 .stat{padding:26px 24px;border-right:1px solid var(--line)}
 .stat:last-child{border-right:0}
 .stat b{display:block;font-family:var(--serif);font-size:clamp(2rem,4vw,2.8rem);font-weight:600;line-height:1;color:var(--night)}
@@ -97,7 +98,7 @@ header.top.scrolled{background:rgba(10,38,34,.86);backdrop-filter:blur(14px);box
 /* Marquee */
 .marquee{overflow:hidden;padding-block:26px;margin-top:clamp(40px,6vw,64px);border-block:1px solid var(--line)}
 .marquee-track{display:flex;gap:48px;width:max-content;animation:scroll 38s linear infinite}
-.marquee span{display:flex;align-items:center;gap:48px;font-family:var(--serif);font-style:italic;font-size:clamp(1.3rem,2.4vw,1.8rem);color:var(--night);white-space:nowrap}
+.marquee span{display:flex;align-items:center;gap:48px;font-family:var(--serif);text-transform:uppercase;letter-spacing:.04em;font-size:clamp(1.2rem,2.2vw,1.6rem);color:var(--night);white-space:nowrap}
 .marquee span::after{content:"✦";font-style:normal;font-size:.8em;color:var(--gold)}
 @keyframes scroll{to{transform:translateX(-50%)}}
 
@@ -112,7 +113,7 @@ section.block{padding-block:clamp(72px,10vw,128px)}
 /* Services bento */
 .services{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:20px}
 .svc{grid-column:span 6;position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:clamp(26px,3.5vw,40px);display:flex;flex-direction:column;gap:16px;overflow:hidden;transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease}
-.svc:hover{transform:translateY(-6px);box-shadow:0 30px 60px -30px rgba(10,38,34,.35);border-color:var(--gold)}
+.svc:hover{transform:translateY(-6px);box-shadow:0 30px 60px -30px rgba(43,45,49,.35);border-color:var(--gold)}
 .svc:nth-child(1){grid-column:span 7}
 .svc:nth-child(2){grid-column:span 5}
 .svc:nth-child(3){grid-column:span 5}
@@ -121,26 +122,26 @@ section.block{padding-block:clamp(72px,10vw,128px)}
 .svc.dark p,.svc.dark li{color:rgba(255,255,255,.72)}
 .svc .num{position:absolute;right:20px;top:4px;font-family:var(--serif);font-size:7.5rem;font-weight:600;line-height:1;color:var(--sand);pointer-events:none;transition:color .3s ease}
 .svc.dark .num{color:rgba(255,255,255,.06)}
-.svc:hover .num{color:rgba(212,168,87,.22)}
+.svc:hover .num{color:rgba(74,144,226,.22)}
 .svc-icon{position:relative;width:58px;height:58px;border-radius:16px;display:grid;place-items:center;background:var(--night);color:var(--gold-2)}
-.svc.dark .svc-icon{background:linear-gradient(135deg,var(--gold-2),var(--gold-deep));color:var(--night)}
+.svc.dark .svc-icon{background:linear-gradient(135deg,var(--gold-2),var(--gold-deep));color:#fff}
 .svc-icon svg{width:30px;height:30px}
 .svc h3{position:relative;font-size:clamp(1.6rem,2.6vw,2.1rem)}
 .svc p{position:relative;color:var(--muted);max-width:52ch}
 .svc ul{position:relative;margin:6px 0 0;padding:0;list-style:none;display:grid;gap:10px;font-size:.95rem;font-weight:500}
 .svc li{display:flex;gap:12px;align-items:flex-start}
-.svc li::before{content:"";flex:none;width:18px;height:18px;margin-top:3px;border-radius:50%;background:rgba(212,168,87,.18) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.5l2.5 2.5L12 5.5' fill='none' stroke='%23a97f2f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/12px no-repeat}
-.svc.dark li::before{background-color:rgba(212,168,87,.25);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.5l2.5 2.5L12 5.5' fill='none' stroke='%23e8c987' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+.svc li::before{content:"";flex:none;width:18px;height:18px;margin-top:3px;border-radius:50%;background:rgba(74,144,226,.18) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.5l2.5 2.5L12 5.5' fill='none' stroke='%231f6fd1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/12px no-repeat}
+.svc.dark li::before{background-color:rgba(74,144,226,.25);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.5l2.5 2.5L12 5.5' fill='none' stroke='%237db4f0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
 @media (max-width:860px){.svc,.svc:nth-child(n){grid-column:1/-1}}
 
 /* Process */
 .process-wrap{background:var(--night);color:#fff;position:relative;overflow:hidden}
-.process-wrap::before{content:"";position:absolute;width:700px;height:700px;right:-200px;top:-300px;background:radial-gradient(circle,rgba(212,168,87,.16),transparent 65%);pointer-events:none}
+.process-wrap::before{content:"";position:absolute;width:700px;height:700px;right:-200px;top:-300px;background:radial-gradient(circle,rgba(74,144,226,.16),transparent 65%);pointer-events:none}
 .process{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;counter-reset:step}
-.process::before{content:"";position:absolute;left:28px;right:28px;top:28px;height:1px;background:linear-gradient(90deg,var(--gold),rgba(212,168,87,.15))}
+.process::before{content:"";position:absolute;left:28px;right:28px;top:28px;height:1px;background:linear-gradient(90deg,var(--gold),rgba(74,144,226,.15))}
 .step{position:relative}
 .step .dot{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:var(--night);border:1px solid var(--gold);font-family:var(--serif);font-size:1.3rem;color:var(--gold-2);position:relative;transition:background .3s ease,color .3s ease}
-.step:hover .dot{background:var(--gold);color:var(--night)}
+.step:hover .dot{background:var(--gold);color:#fff}
 .step h3{font-size:1.6rem;margin:22px 0 10px}
 .step p{color:rgba(255,255,255,.65);font-size:.97rem;max-width:30ch}
 @media (max-width:860px){.process{grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 24px}.process::before{display:none}}
@@ -163,14 +164,14 @@ section.block{padding-block:clamp(72px,10vw,128px)}
 
 /* CTA band */
 .cta-band{padding-bottom:clamp(72px,10vw,120px)}
-.cta-box{position:relative;overflow:hidden;border-radius:calc(var(--r) + 6px);padding:clamp(36px,6vw,72px);background:linear-gradient(120deg,var(--gold-2),var(--gold) 45%,var(--gold-deep));color:var(--night);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:28px}
-.cta-box::after{content:"";position:absolute;right:-80px;bottom:-140px;width:420px;height:420px;border-radius:50%;border:1px solid rgba(10,38,34,.18);box-shadow:0 0 0 60px rgba(255,255,255,.08),0 0 0 120px rgba(255,255,255,.05);pointer-events:none}
+.cta-box{position:relative;overflow:hidden;border-radius:calc(var(--r) + 6px);padding:clamp(36px,6vw,72px);background:linear-gradient(120deg,var(--gold) 0%,var(--gold-deep) 100%);color:#fff;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:28px}
+.cta-box::after{content:"";position:absolute;right:-80px;bottom:-140px;width:420px;height:420px;border-radius:50%;border:1px solid rgba(43,45,49,.18);box-shadow:0 0 0 60px rgba(255,255,255,.08),0 0 0 120px rgba(255,255,255,.05);pointer-events:none}
 .cta-box h2{font-size:clamp(2rem,4.4vw,3.2rem);max-width:18ch;position:relative}
 .cta-box .btns{display:flex;flex-wrap:wrap;gap:12px;position:relative;z-index:1}
 
 /* Contact */
 .contact{background:var(--night);color:#fff;position:relative;overflow:hidden}
-.contact::before{content:"";position:absolute;width:800px;height:800px;left:-300px;bottom:-400px;background:radial-gradient(circle,rgba(212,168,87,.14),transparent 65%);pointer-events:none}
+.contact::before{content:"";position:absolute;width:800px;height:800px;left:-300px;bottom:-400px;background:radial-gradient(circle,rgba(74,144,226,.14),transparent 65%);pointer-events:none}
 .contact-grid{position:relative;display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(32px,5vw,72px);padding-block:clamp(72px,10vw,120px)}
 .contact h2{font-size:clamp(2.4rem,5.5vw,4rem);margin-top:16px}
 .contact .intro{color:rgba(255,255,255,.7);margin-top:18px;max-width:44ch;font-size:1.05rem}
@@ -186,12 +187,12 @@ form h3{grid-column:1/-1;font-size:1.7rem}
 .field.full{grid-column:1/-1}
 label{font-size:.78rem;font-weight:700;letter-spacing:.04em;color:var(--muted)}
 input,select,textarea{font:inherit;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:var(--r-sm);padding:.8rem .9rem;width:100%;transition:border-color .2s ease,box-shadow .2s ease}
-input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 4px rgba(212,168,87,.2)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 4px rgba(74,144,226,.2)}
 textarea{min-height:120px;resize:vertical}
 .form-foot{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:16px;justify-content:space-between;margin-top:4px}
 .form-note{font-size:.85rem;color:var(--muted)}
 .form-actions{display:flex;flex-wrap:wrap;gap:10px}
-.form-ok{grid-column:1/-1;background:rgba(212,168,87,.16);border:1px solid rgba(212,168,87,.5);border-radius:var(--r-sm);padding:14px 16px;font-size:.95rem;font-weight:500}
+.form-ok{grid-column:1/-1;background:rgba(74,144,226,.16);border:1px solid rgba(74,144,226,.5);border-radius:var(--r-sm);padding:14px 16px;font-size:.95rem;font-weight:500}
 @media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
 @media (max-width:540px){form{grid-template-columns:1fr}}
 
@@ -204,7 +205,7 @@ textarea{min-height:120px;resize:vertical}
 @media (max-width:540px){.wa-float span{display:none}.wa-float{padding:15px}}
 
 /* Footer */
-footer{background:#071c19;color:rgba(255,255,255,.55);font-size:.85rem;padding-block:28px 100px}
+footer{background:#1f2124;color:rgba(255,255,255,.55);font-size:.85rem;padding-block:28px 100px}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 footer b{color:var(--gold-2);font-weight:600}
 
@@ -226,11 +227,11 @@ footer b{color:var(--gold-2);font-weight:600}
   <div class="wrap nav">
     <a class="brand" href="#home" aria-label="One Place Real Estate home">
       <svg class="logo-mark" width="46" height="46" viewBox="0 0 44 44" aria-hidden="true">
-        <defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e8c987"/><stop offset="1" stop-color="#a97f2f"/></linearGradient></defs>
-        <rect width="44" height="44" rx="12" fill="#0f332d" stroke="rgba(232,201,135,.45)"/>
-        <path d="M23 9h4.2a8.6 8.6 0 0 1 0 17.2H23v-4.4h4.2a4.2 4.2 0 0 0 0-8.4H23z" fill="#e8c987"/>
-        <path d="M17.6 35V15.6l-4.6 2.9v-4.7L19.3 9H23v26z" fill="url(#lg)"/>
-        <rect x="19.2" y="15" width="1.8" height="2.4" fill="#0f332d"/><rect x="19.2" y="20.5" width="1.8" height="2.4" fill="#0f332d"/><rect x="19.2" y="26" width="1.8" height="2.4" fill="#0f332d"/>
+        <rect x="8" y="14" width="8" height="26" fill="#4a90e2"/>
+        <circle cx="24" cy="16" r="13" fill="#4a90e2"/>
+        <path d="M12 16.5 31 8l1.6 3.8L13.6 20.3z" fill="#fff"/>
+        <path d="M19.5 16h5v15h-5z" fill="#fff"/>
+        <rect x="28" y="14.5" width="3.5" height="2.6" fill="#fff"/><rect x="28" y="19" width="3.5" height="2.6" fill="#fff"/>
       </svg>
       <span class="brand-name">One Place<small>Real Estate &amp; Gen. Maint. L.L.C, S.P.C</small></span>
     </a>
@@ -256,7 +257,7 @@ footer b{color:var(--gold-2);font-weight:600}
         <div class="hero-cta">
           <a class="btn btn-gold" href="#contact">Request a site visit
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          <a class="btn btn-wa wa-link" href="https://wa.me/971000000000" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.2-.2-.4-.3z"/></svg>WhatsApp</a>
+          <a class="btn btn-wa wa-link" href="https://wa.me/971503275238" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.2-.2-.4-.3z"/></svg>WhatsApp</a>
           <a class="btn btn-glass" href="#services">Our services</a>
         </div>
       </div>
@@ -381,17 +382,17 @@ footer b{color:var(--gold-2);font-weight:600}
       <div class="why-visual reveal" aria-hidden="true">
         <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
           <defs>
-            <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e8c987"/><stop offset="1" stop-color="#a97f2f"/></linearGradient>
-            <linearGradient id="tw" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1c4a41"/><stop offset="1" stop-color="#0a2622"/></linearGradient>
+            <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7db4f0"/><stop offset="1" stop-color="#1f6fd1"/></linearGradient>
+            <linearGradient id="tw" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#55585f"/><stop offset="1" stop-color="#2b2d31"/></linearGradient>
           </defs>
           <circle cx="290" cy="150" r="70" fill="url(#sun)" opacity=".9"/>
-          <g fill="url(#tw)" stroke="rgba(232,201,135,.35)">
+          <g fill="url(#tw)" stroke="rgba(125,180,240,.35)">
             <path d="M60 500V230l50-30v300z"/>
             <path d="M120 500V120l35-50 35 50v380z"/>
             <path d="M200 500V260h70v240z"/>
             <path d="M280 500V200q40-20 70 0v300z"/>
           </g>
-          <g fill="#e8c987" opacity=".75">
+          <g fill="#7db4f0" opacity=".75">
             <rect x="135" y="160" width="8" height="12"/><rect x="165" y="160" width="8" height="12"/><rect x="135" y="200" width="8" height="12"/><rect x="150" y="240" width="8" height="12"/><rect x="165" y="280" width="8" height="12"/><rect x="135" y="320" width="8" height="12"/>
             <rect x="215" y="290" width="10" height="10"/><rect x="245" y="320" width="10" height="10"/><rect x="215" y="350" width="10" height="10"/>
             <rect x="300" y="240" width="8" height="14"/><rect x="325" y="280" width="8" height="14"/><rect x="300" y="320" width="8" height="14"/>
@@ -420,7 +421,7 @@ footer b{color:var(--gold-2);font-weight:600}
       <h2>Ready for a building that runs itself?</h2>
       <div class="btns">
         <a class="btn btn-dark" href="#contact">Book a free site survey</a>
-        <a class="btn btn-wa wa-link" href="https://wa.me/971000000000" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>Chat on WhatsApp</a>
+        <a class="btn btn-wa wa-link" href="https://wa.me/971503275238" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>Chat on WhatsApp</a>
       </div>
     </div>
   </div>
@@ -433,10 +434,11 @@ footer b{color:var(--gold-2);font-weight:600}
         <h2>Tell us about your <em>property</em></h2>
         <p class="intro">Send a few details and we'll arrange a site visit and a written proposal.</p>
         <dl class="details">
-          <div><dt>Phone</dt><dd>+971 2 000 0000</dd></div>
-          <div><dt>WhatsApp</dt><dd><a class="wa-link" href="https://wa.me/971000000000" target="_blank" rel="noopener"><span class="wa-num">+971 00 000 0000</span></a></dd></div>
-          <div><dt>Email</dt><dd>info@oneplacerealestate.ae</dd></div>
-          <div><dt>Office</dt><dd>Abu Dhabi, United Arab Emirates</dd></div>
+          <div><dt>Mobile</dt><dd><a href="tel:+971559045645">+971 55 904 5645</a></dd></div>
+          <div><dt>WhatsApp</dt><dd><a class="wa-link" href="https://wa.me/971503275238" target="_blank" rel="noopener"><span class="wa-num">+971 50 327 5238</span></a></dd></div>
+          <div><dt>Landline</dt><dd><a href="tel:+97126274600">+971 2 627 4600</a></dd></div>
+          <div><dt>Email</dt><dd><a href="mailto:oneplacerealestate2025@gmail.com">oneplacerealestate2025@gmail.com</a></dd></div>
+          <div><dt>Office</dt><dd>Building No. C94, Office M04<br>Sabiya ME 10, Abu Dhabi<br>United Arab Emirates</dd></div>
           <div><dt>Hours</dt><dd>Sun–Thu, 8:00–18:00 · Emergencies 24/7</dd></div>
         </dl>
       </div>
@@ -467,7 +469,7 @@ footer b{color:var(--gold-2);font-weight:600}
         <div class="form-foot">
           <span class="form-note">We reply within one working day.</span>
           <div class="form-actions">
-            <a class="btn btn-wa" id="wa-form" href="https://wa.me/971000000000" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>Send on WhatsApp</a>
+            <a class="btn btn-wa" id="wa-form" href="https://wa.me/971503275238" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>Send on WhatsApp</a>
             <button class="btn btn-dark" type="submit">Send request</button>
           </div>
         </div>
@@ -477,7 +479,7 @@ footer b{color:var(--gold-2);font-weight:600}
   </section>
 </main>
 
-<a class="wa-float wa-link" href="https://wa.me/971000000000" target="_blank" rel="noopener" aria-label="Enquire on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.2-.2-.4-.3z"/></svg><span>WhatsApp us</span></a>
+<a class="wa-float wa-link" href="https://wa.me/971503275238" target="_blank" rel="noopener" aria-label="Enquire on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.2-.2-.4-.3z"/></svg><span>WhatsApp us</span></a>
 
 <footer>
   <div class="wrap">
@@ -525,19 +527,19 @@ document.querySelectorAll('.reveal').forEach((el, i) => {
   function draw(){
     ctx.clearRect(0,0,W,H);
     towers.forEach((t, ti) => {
-      const y = H - t.h, shade = ti % 2 ? '#0c2d28' : '#0f362f';
+      const y = H - t.h, shade = ti % 2 ? '#303237' : '#3a3d42';
       ctx.fillStyle = shade; ctx.fillRect(t.x, y, t.w, t.h);
-      ctx.fillStyle = 'rgba(232,201,135,.18)'; ctx.fillRect(t.x, y, t.w, 1);
+      ctx.fillStyle = 'rgba(125,180,240,.18)'; ctx.fillRect(t.x, y, t.w, 1);
       if (t.spire){ ctx.fillStyle = shade; ctx.fillRect(t.x + t.w/2 - 1.5, y - 30, 3, 30); }
       const gx = t.w / t.cols;
       for (let r = 0; r < t.rows; r++) for (let k = 0; k < t.cols; k++){
         if (!t.lit[r*t.cols + k]) continue;
-        ctx.fillStyle = 'rgba(232,201,135,' + (.45 + ((r+k)%3)*.15) + ')';
+        ctx.fillStyle = 'rgba(125,180,240,' + (.45 + ((r+k)%3)*.15) + ')';
         ctx.fillRect(t.x + k*gx + 4, y + 10 + r*18, gx - 8, 8);
       }
     });
     const g = ctx.createLinearGradient(0, H*.55, 0, H);
-    g.addColorStop(0,'rgba(15,51,45,0)'); g.addColorStop(1,'rgba(15,51,45,.95)');
+    g.addColorStop(0,'rgba(53,56,61,0)'); g.addColorStop(1,'rgba(53,56,61,.95)');
     ctx.fillStyle = g; ctx.fillRect(0,0,W,H);
   }
   build();
@@ -549,7 +551,7 @@ document.querySelectorAll('.reveal').forEach((el, i) => {
 })();
 
 // WhatsApp enquiry: set your number once here (country code, no + or spaces)
-const WA_NUMBER = '971000000000';
+const WA_NUMBER = '971503275238';
 const WA_GREETING = 'Hello One Place Real Estate, I would like to enquire about your services.';
 document.querySelectorAll('.wa-link').forEach(a => a.href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(WA_GREETING)}`);
 const qf = document.getElementById('quote-form'), waForm = document.getElementById('wa-form');
