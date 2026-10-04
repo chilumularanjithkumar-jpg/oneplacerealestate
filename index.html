@@ -118,9 +118,6 @@ section.block{padding-block:clamp(72px,10vw,128px)}
 .svc:nth-child(2){grid-column:span 5}
 .svc:nth-child(3){grid-column:span 5}
 .svc:nth-child(4){grid-column:span 7}
-.svc:nth-child(5){grid-column:1/-1}
-.svc:nth-child(5) ul{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:28px;max-width:820px}
-@media (max-width:640px){.svc:nth-child(5) ul{grid-template-columns:1fr}}
 .svc.dark{background:linear-gradient(160deg,var(--night-3),var(--night));color:#fff;border-color:transparent}
 .svc.dark p,.svc.dark li{color:rgba(255,255,255,.72)}
 .svc .num{position:absolute;right:20px;top:4px;font-family:var(--serif);font-size:7.5rem;font-weight:600;line-height:1;color:var(--sand);pointer-events:none;transition:color .3s ease}
@@ -136,16 +133,16 @@ section.block{padding-block:clamp(72px,10vw,128px)}
 .svc li::before{content:"";flex:none;width:18px;height:18px;margin-top:3px;border-radius:50%;background:rgba(74,144,226,.18) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.5l2.5 2.5L12 5.5' fill='none' stroke='%231f6fd1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/12px no-repeat}
 .svc.dark li::before{background-color:rgba(74,144,226,.25);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.5l2.5 2.5L12 5.5' fill='none' stroke='%237db4f0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
 @media (max-width:860px){.svc,.svc:nth-child(n){grid-column:1/-1}}
-/* Photo backgrounds on service cards */
-.svc.photo{padding-top:clamp(130px,14vw,180px);background:var(--night-2);isolation:isolate}
-.svc.photo::before{content:"";position:absolute;inset:0;z-index:-2;background:var(--img) center/cover no-repeat;transform:scale(1.02);transition:transform .9s cubic-bezier(.2,.7,.2,1)}
-.svc.photo::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(31,33,36,.25) 0%,rgba(31,33,36,.78) 38%,rgba(31,33,36,.94) 70%,rgba(31,33,36,.97) 100%)}
-.svc.photo:hover::before{transform:scale(1.08)}
+/* Service cards: clear photo on top, text below */
+.svc.photo{--ph:clamp(200px,22vw,250px);padding-top:calc(var(--ph) + 34px);background:var(--night-2);isolation:isolate}
+.svc.photo::before{content:"";position:absolute;left:0;right:0;top:0;height:var(--ph);z-index:-2;background:var(--img) center/cover no-repeat;transform-origin:center;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.svc.photo::after{content:"";position:absolute;left:0;right:0;top:0;height:var(--ph);z-index:-1;background:linear-gradient(180deg,rgba(31,33,36,0) 55%,rgba(53,56,61,1) 100%)}
+.svc.photo:hover::before{transform:scale(1.06)}
 .svc.photo:hover{border-color:var(--gold)}
-.svc.photo .num{color:rgba(255,255,255,.16)}
-.svc.photo:hover .num{color:rgba(125,180,240,.45)}
+.svc.photo .num{top:16px;left:16px;right:auto;font-size:.85rem;font-family:var(--sans);font-weight:700;letter-spacing:.12em;color:#fff;background:rgba(31,33,36,.72);backdrop-filter:blur(6px);padding:6px 12px;border-radius:999px}
+.svc.photo:hover .num{color:#fff;background:var(--gold)}
+.svc.photo .svc-icon{position:absolute;top:calc(var(--ph) - 29px);left:clamp(26px,3.5vw,40px);background:var(--gold);color:#fff;box-shadow:0 10px 24px -8px rgba(0,0,0,.6);border:3px solid var(--night-2)}
 .svc.photo p,.svc.photo li{color:rgba(255,255,255,.85)}
-.svc.photo .svc-icon{background:var(--gold);color:#fff;box-shadow:0 10px 24px -8px rgba(74,144,226,.7)}
 
 /* Process */
 .process-wrap{background:var(--night);color:#fff;position:relative;overflow:hidden}
@@ -264,7 +261,7 @@ footer b{color:var(--gold-2);font-weight:600}
     <canvas id="skyline" aria-hidden="true"></canvas>
     <div class="wrap hero-inner">
       <div class="reveal">
-        <p class="eyebrow">Buildings · Leasing · Advisory · Car Care — UAE</p>
+        <p class="eyebrow">Buildings · Leasing · Advisory — UAE</p>
         <h1>Your building,<br><em>run properly.</em></h1>
         <p class="lede">One team for the whole life of a property: daily cleaning, planned and reactive maintenance, leasing and tenant management, and clear advice before you buy, sell or let.</p>
         <div class="hero-cta">
@@ -281,7 +278,7 @@ footer b{color:var(--gold-2);font-weight:600}
         <a href="#services"><span class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M30 8a8 8 0 0 0-9 10L8 31a4 4 0 0 0 6 6l13-13a8 8 0 0 0 10-9l-5 5-5-1-1-5z"/></svg></span><div><b>Maintenance</b><span>AMC, MEP, 24/7 call-outs</span></div><span class="arrow">→</span></a>
         <a href="#services"><span class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="17" cy="24" r="7"/><path d="M24 24h18M36 24v6M41 24v5"/></svg></span><div><b>Lease &amp; management</b><span>Tenants, Ejari, rent</span></div><span class="arrow">→</span></a>
         <a href="#services"><span class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M8 40V18l10-6v28M18 40V8l14 6v26M32 40V22l8 4v14M6 40h36"/></svg></span><div><b>Consultancy</b><span>Yields, valuation, advice</span></div><span class="arrow">→</span></a>
-        <a href="#services"><span class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 32v-6l4-9h24l4 9v6z"/><path d="M8 26h32"/><circle cx="15" cy="33" r="3"/><circle cx="33" cy="33" r="3"/><path d="M18 8c0 2-2 3-2 5a2 2 0 0 0 4 0c0-2-2-3-2-5zM30 6c0 2-2 3-2 5a2 2 0 0 0 4 0c0-2-2-3-2-5z"/></svg></span><div><b>Car wash</b><span>Wash, detailing, fleets</span></div><span class="arrow">→</span></a>
+        <a href="#services"><span class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 42V10h18v32M28 18h10v24M6 42h36"/><path d="M15 16h8M15 22h8M15 28h8"/><path d="M36 4v6M32 6l4 4 4-4"/></svg></span><div><b>Building washing</b><span>Facade, glass, high-rise</span></div><span class="arrow">→</span></a>
       </nav>
     </div>
   </section>
@@ -290,7 +287,7 @@ footer b{color:var(--gold-2);font-weight:600}
   <div class="wrap stats">
     <div class="stats-grid reveal">
       <div class="stat"><b>24<sup>/7</sup></b><span>Maintenance call-outs</span></div>
-      <div class="stat"><b>5</b><span>Services, one contract</span></div>
+      <div class="stat"><b>1</b><span>Contract for every service</span></div>
       <div class="stat"><b>1</b><span>Named account manager</span></div>
       <div class="stat"><b>1<sup>day</sup></b><span>Reply to every enquiry</span></div>
     </div>
@@ -299,8 +296,8 @@ footer b{color:var(--gold-2);font-weight:600}
   <!-- MARQUEE -->
   <div class="marquee" aria-hidden="true">
     <div class="marquee-track">
-      <span>Annual maintenance contracts</span><span>Ejari registration support</span><span>Service charge budgeting</span><span>Residential &amp; commercial</span><span>Facade &amp; glass cleaning</span><span>Tenant screening</span><span>Car wash &amp; detailing</span>
-      <span>Annual maintenance contracts</span><span>Ejari registration support</span><span>Service charge budgeting</span><span>Residential &amp; commercial</span><span>Facade &amp; glass cleaning</span><span>Tenant screening</span><span>Car wash &amp; detailing</span>
+      <span>Annual maintenance contracts</span><span>Ejari registration support</span><span>Service charge budgeting</span><span>Residential &amp; commercial</span><span>Facade &amp; glass cleaning</span><span>Tenant screening</span><span>Building &amp; facade washing</span>
+      <span>Annual maintenance contracts</span><span>Ejari registration support</span><span>Service charge budgeting</span><span>Residential &amp; commercial</span><span>Facade &amp; glass cleaning</span><span>Tenant screening</span><span>Building &amp; facade washing</span>
     </div>
   </div>
 
@@ -310,20 +307,20 @@ footer b{color:var(--gold-2);font-weight:600}
       <div class="sec-head reveal">
         <div>
           <p class="eyebrow">What we do</p>
-          <h2>Five services. <em>One</em> point of contact.</h2>
+          <h2>Every service. <em>One</em> point of contact.</h2>
         </div>
         <p>Owners, landlords and facility managers hire us for one service and keep us for the rest. Every contract comes with a named account manager and monthly reporting.</p>
       </div>
 
       <div class="services">
-        <article class="svc dark photo reveal" style="--img:url('https://images.unsplash.com/photo-1627905646269-7f034dcc5738?auto=format&fit=crop&w=1200&q=70')">
+        <article class="svc dark photo reveal" style="--img:url('https://images.unsplash.com/photo-1775809675685-6b8e9cfc9c96?auto=format&fit=crop&w=1200&q=70')">
           <span class="num" aria-hidden="true">01</span>
           <div class="svc-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 40h20l-2-18H16z"/><path d="M20 22v-8h8v8"/><path d="M24 14V6"/><path d="M33 10l4-3M35 15h5M33 20l4 3"/></svg></div>
           <h3>Buildings Cleaning Services</h3>
           <p>Scheduled and one-off cleaning for towers, villas, offices and retail units, delivered by trained, uniformed crews.</p>
           <ul>
             <li>Daily lobby, corridor and common-area cleaning</li>
-            <li>Facade and glass cleaning</li>
+            <li>Building washing — facade, glass and high-rise exteriors</li>
             <li>Deep cleaning for move-in and move-out</li>
             <li>Car park, water tank and waste room cleaning</li>
           </ul>
@@ -345,7 +342,7 @@ footer b{color:var(--gold-2);font-weight:600}
         <article class="svc dark photo reveal" style="--img:url('https://images.unsplash.com/photo-1741156386380-0236c72eb6f9?auto=format&fit=crop&w=1200&q=70')">
           <span class="num" aria-hidden="true">03</span>
           <div class="svc-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="17" cy="24" r="7"/><path d="M24 24h18M36 24v6M41 24v5"/></svg></div>
-          <h3>Real Estate Lease &amp; Management</h3>
+          <h3>Real Estate Lease &amp; Management Services</h3>
           <p>We lease your units and manage them afterwards, so you get rent on time without handling tenants day to day.</p>
           <ul>
             <li>Marketing, viewings and tenant screening</li>
@@ -365,21 +362,6 @@ footer b{color:var(--gold-2);font-weight:600}
             <li>Investment and acquisition advice</li>
             <li>Property valuation support</li>
             <li>Building condition and asset improvement reviews</li>
-          </ul>
-        </article>
-
-        <article class="svc dark photo reveal" style="--img:url('https://images.unsplash.com/photo-1762933855598-273a51b47649?auto=format&fit=crop&w=1600&q=70')">
-          <span class="num" aria-hidden="true">05</span>
-          <div class="svc-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 32v-6l4-9h24l4 9v6z"/><path d="M8 26h32"/><circle cx="15" cy="33" r="3"/><circle cx="33" cy="33" r="3"/><path d="M18 8c0 2-2 3-2 5a2 2 0 0 0 4 0c0-2-2-3-2-5zM30 6c0 2-2 3-2 5a2 2 0 0 0 4 0c0-2-2-3-2-5z"/></svg></div>
-          <h3>Car Cleaning &amp; Washing</h3>
-          <p>Hand wash and detailing for residents, tenants and company fleets — at your building's car park or our location.</p>
-          <ul>
-            <li>Exterior hand wash and foam wash</li>
-            <li>Interior vacuuming and dashboard cleaning</li>
-            <li>Waterless wash in basement car parks</li>
-            <li>Polishing, waxing and full detailing</li>
-            <li>Monthly packages for residents and fleets</li>
-            <li>Engine bay and tyre cleaning</li>
           </ul>
         </article>
       </div>
@@ -428,7 +410,7 @@ footer b{color:var(--gold-2);font-weight:600}
             <rect x="75" y="260" width="8" height="10"/><rect x="92" y="300" width="8" height="10"/>
           </g>
         </svg>
-        <div class="why-badge glass"><b>5→1</b><span>Five services, one agreement and one invoice for your property.</span></div>
+        <div class="why-badge glass"><b>1</b><span>One agreement and one invoice for every service at your property.</span></div>
       </div>
       <div>
         <div class="reveal">
@@ -436,7 +418,7 @@ footer b{color:var(--gold-2);font-weight:600}
           <h2 style="font-size:clamp(2.3rem,5vw,3.8rem);margin-top:16px">Less chasing. <em>More certainty.</em></h2>
         </div>
         <div class="why-list">
-          <div class="why-item reveal"><i>i.</i><div><b>One contract</b><p>Cleaning, maintenance, leasing, advice and car care under one agreement and one invoice.</p></div></div>
+          <div class="why-item reveal"><i>i.</i><div><b>One contract</b><p>Cleaning, maintenance, leasing and advice under one agreement and one invoice.</p></div></div>
           <div class="why-item reveal"><i>ii.</i><div><b>Named manager</b><p>A single account manager who knows your building and answers your calls.</p></div></div>
           <div class="why-item reveal"><i>iii.</i><div><b>Clear reporting</b><p>Monthly statements with photos, job logs and rent status for every unit.</p></div></div>
         </div>
@@ -483,7 +465,7 @@ footer b{color:var(--gold-2);font-weight:600}
             <option>Buildings Maintenance</option>
             <option>Real Estate Lease &amp; Management</option>
             <option>Real Estate Consultancy</option>
-            <option>Car Cleaning &amp; Washing</option>
+            <option>Building Washing</option>
             <option>More than one service</option>
           </select>
         </div>
@@ -513,7 +495,7 @@ footer b{color:var(--gold-2);font-weight:600}
 <footer>
   <div class="wrap">
     <span>© <span id="yr">2026</span> <b>One Place</b> Real Estate &amp; Gen. Maint. L.L.C, S.P.C. All rights reserved.</span>
-    <span>Cleaning · Maintenance · Leasing · Consultancy · Car Wash</span>
+    <span>Cleaning · Maintenance · Leasing · Consultancy</span>
   </div>
 </footer>
 
