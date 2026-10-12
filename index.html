@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>One Place Real Estate &amp; Gen. Maint. LLC | Building Cleaning, Maintenance &amp; Leasing in Abu Dhabi</title>
-<meta name="description" content="One Place Real Estate & Gen. Maint. L.L.C, S.P.C — Abu Dhabi (Sabiya ME 10). Building cleaning and washing, building maintenance, real estate lease & management and consultancy. WhatsApp +971 55 904 5645.">
+<title>One Place Real Estate &amp; Gen. Maint. LLC | Property Leasing &amp; Management, Cleaning &amp; Maintenance in Abu Dhabi</title>
+<meta name="description" content="One Place Real Estate & Gen. Maint. L.L.C, S.P.C — Abu Dhabi (Sabiya ME 10). Real estate lease & management, building cleaning and washing, building maintenance and consultancy. WhatsApp +971 55 904 5645.">
 <link rel="canonical" href="https://www.oneplacerealestate.ae/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.oneplacerealestate.ae/">
 <meta property="og:title" content="One Place Real Estate & Gen. Maint. — Abu Dhabi">
-<meta property="og:description" content="Building cleaning and washing, maintenance, lease & management and real estate consultancy in Abu Dhabi, UAE.">
+<meta property="og:description" content="Real estate lease & management, building cleaning and washing, maintenance and consultancy in Abu Dhabi, UAE.">
 <meta property="og:image" content="https://images.unsplash.com/photo-1590140568849-f27028e1f822?auto=format&fit=crop&w=1200&q=70">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"One Place Real Estate & Gen. Maint. L.L.C, S.P.C","url":"https://www.oneplacerealestate.ae/","telephone":"+97126274600","email":"oneplacerealestate2025@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Building No. C94, Office M04, Sabiya ME 10","addressLocality":"Abu Dhabi","addressCountry":"AE"},"areaServed":"United Arab Emirates"}</script>
 <meta name="theme-color" content="#2b2d31">
@@ -73,7 +73,16 @@ header.top.scrolled{background:rgba(43,45,49,.86);backdrop-filter:blur(14px);box
 /* Hero */
 .hero{position:relative;background:radial-gradient(1200px 600px at 85% 10%,rgba(74,144,226,.22),transparent 60%),radial-gradient(900px 500px at 0% 100%,rgba(68,71,77,.9),transparent 70%),linear-gradient(180deg,#1f2124 0%,var(--night) 55%,var(--night-2) 100%);color:#fff;overflow:hidden;isolation:isolate}
 .hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse at 50% 30%,#000 30%,transparent 75%);z-index:-1}
-.hero canvas{position:absolute;left:0;right:0;bottom:0;width:100%;height:46%;z-index:-1;pointer-events:none}
+.hero canvas{position:absolute;left:0;right:0;bottom:0;width:100%;height:46%;z-index:-1;pointer-events:none;opacity:.85}
+.hero-photo{position:absolute;inset:0;z-index:-2;background:
+  linear-gradient(90deg,rgba(28,30,33,.97) 0%,rgba(28,30,33,.88) 38%,rgba(28,30,33,.55) 70%,rgba(28,30,33,.75) 100%),
+  linear-gradient(180deg,rgba(28,30,33,.2) 0%,rgba(28,30,33,0) 40%,rgba(43,45,49,1) 100%),
+  var(--hero-img) center 30%/cover no-repeat;
+  animation:heroZoom 24s ease-in-out infinite alternate}
+@keyframes heroZoom{from{transform:scale(1)}to{transform:scale(1.07)}}
+.hero-trust{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:30px;font-size:.85rem;font-weight:600;color:rgba(255,255,255,.7)}
+.hero-trust span{display:inline-flex;align-items:center;gap:8px}
+.hero-trust span::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(74,144,226,.2)}
 .hero-inner{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(28px,5vw,64px);align-items:center;padding-top:clamp(120px,16vw,170px);padding-bottom:clamp(160px,20vw,240px)}
 .hero h1{font-size:clamp(2.9rem,7.4vw,6rem);font-weight:400;margin-top:22px}
 .hero h1 em{font-weight:400}
@@ -84,6 +93,10 @@ header.top.scrolled{background:rgba(43,45,49,.86);backdrop-filter:blur(14px);box
 .hero-card h2{font-size:1.15rem;font-weight:600;color:var(--gold-2);margin-bottom:8px;font-family:var(--sans);letter-spacing:.02em}
 .hero-card a{display:flex;align-items:center;gap:14px;padding:12px;border-radius:var(--r-sm);text-decoration:none;transition:background .2s ease}
 .hero-card a:hover{background:rgba(255,255,255,.07)}
+.hero-card a.feat{background:linear-gradient(135deg,rgba(74,144,226,.32),rgba(31,111,209,.18));border:1px solid rgba(125,180,240,.45);margin-bottom:6px}
+.hero-card a.feat .ic{background:var(--gold);color:#fff}
+.hero-card a.feat .arrow{opacity:1;transform:none}
+.hero-card em.tag{font-style:normal;display:inline-block;margin-left:8px;padding:2px 8px;border-radius:999px;background:var(--gold);color:#fff;font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;vertical-align:2px}
 .hero-card .ic{flex:none;width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:rgba(74,144,226,.14);color:var(--gold-2)}
 .hero-card .ic svg{width:22px;height:22px}
 .hero-card b{display:block;font-size:.95rem}
@@ -150,6 +163,41 @@ section.block{padding-block:clamp(72px,10vw,128px)}
 .svc.photo:hover .num{color:#fff;background:var(--gold)}
 .svc.photo .svc-icon{position:absolute;top:calc(var(--ph) - 29px);left:clamp(26px,3.5vw,40px);background:var(--gold);color:#fff;box-shadow:0 10px 24px -8px rgba(0,0,0,.6);border:3px solid var(--night-2)}
 .svc.photo p,.svc.photo li{color:rgba(255,255,255,.85)}
+
+/* Leasing spotlight */
+.lease{background:var(--card);border-block:1px solid var(--line)}
+.lease-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px);align-items:center}
+.lease-visual{position:relative;min-height:520px;border-radius:var(--r);overflow:hidden;
+  background:linear-gradient(160deg,var(--night-3),var(--night)) ;isolation:isolate}
+.lease-visual::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--img) center/cover no-repeat;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.lease-visual:hover::before{transform:scale(1.05)}
+.lease-visual::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(31,33,36,0) 45%,rgba(31,33,36,.85) 100%)}
+.lease-chip{position:absolute;left:20px;top:20px;display:flex;align-items:center;gap:12px;padding:12px 16px;color:#fff;font-weight:600;font-size:.88rem}
+.lease-chip svg{width:22px;height:22px;color:var(--gold-2)}
+.lease-badge{position:absolute;left:20px;right:20px;bottom:20px;padding:20px 22px;color:#fff;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;text-align:center}
+.lease-badge b{display:block;font-family:var(--serif);font-size:1.5rem;font-weight:500;color:var(--gold-2);line-height:1.1;text-transform:uppercase}
+.lease-badge span{font-size:.78rem;color:rgba(255,255,255,.72)}
+.lease h2{font-size:clamp(2.3rem,5vw,3.6rem);margin-top:16px}
+.lease .intro{color:var(--muted);font-size:1.05rem;margin-top:18px;max-width:52ch}
+.lease-cols{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:28px}
+.lease-cols h3{font-family:var(--sans);text-transform:none;font-size:1rem;font-weight:700;letter-spacing:0;color:var(--gold-deep);margin-bottom:10px}
+.lease-cols ul{margin:0;padding:0;list-style:none;display:grid;gap:9px;font-size:.95rem;font-weight:500}
+.lease-cols li{display:flex;gap:10px}
+.lease-cols li::before{content:"";flex:none;width:18px;height:18px;margin-top:3px;border-radius:50%;background:rgba(74,144,226,.18) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.5l2.5 2.5L12 5.5' fill='none' stroke='%231f6fd1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/12px no-repeat}
+.lease-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.ptypes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:clamp(48px,6vw,72px)}
+.ptype{position:relative;aspect-ratio:4/5;border-radius:var(--r);overflow:hidden;color:#fff;text-decoration:none;isolation:isolate;
+  background:linear-gradient(160deg,var(--night-3),var(--night));display:flex;flex-direction:column;justify-content:flex-end;padding:20px}
+.ptype::before{content:"";position:absolute;inset:0;z-index:-2;background:var(--img) center/cover no-repeat;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.ptype::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(31,33,36,0) 35%,rgba(31,33,36,.9) 100%);transition:background .3s ease}
+.ptype:hover::before{transform:scale(1.08)}
+.ptype:hover::after{background:linear-gradient(180deg,rgba(31,111,209,.15) 0%,rgba(31,33,36,.92) 100%)}
+.ptype b{font-family:var(--serif);font-size:1.5rem;font-weight:500;text-transform:uppercase;line-height:1.1}
+.ptype span{font-size:.85rem;color:rgba(255,255,255,.75);margin-top:4px}
+.ptype i{position:absolute;top:16px;right:16px;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.14);backdrop-filter:blur(6px);font-style:normal;transition:background .3s ease,transform .3s ease}
+.ptype:hover i{background:var(--gold);transform:rotate(-45deg)}
+@media (max-width:900px){.lease-grid{grid-template-columns:1fr}.lease-visual{min-height:380px}.ptypes{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.lease-cols{grid-template-columns:1fr}.lease-badge b{font-size:1.2rem}}
 
 /* Process */
 .process-wrap{background:var(--night);color:#fff;position:relative;overflow:hidden}
@@ -253,6 +301,7 @@ footer b{color:var(--gold-2);font-weight:600}
       <span class="brand-name">One Place<small>Real Estate &amp; Gen. Maint. L.L.C, S.P.C</small></span>
     </a>
     <nav class="nav-links" aria-label="Main">
+      <a href="#leasing">Leasing</a>
       <a href="#services">Services</a>
       <a href="#process">How we work</a>
       <a href="#why">Why us</a>
@@ -265,25 +314,27 @@ footer b{color:var(--gold-2);font-weight:600}
 <main id="home">
   <!-- HERO -->
   <section class="hero on-dark">
+    <div class="hero-photo" aria-hidden="true" style="--hero-img:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=70')"></div>
     <canvas id="skyline" aria-hidden="true"></canvas>
     <div class="wrap hero-inner">
       <div class="reveal">
-        <p class="eyebrow">Buildings · Leasing · Advisory — UAE</p>
+        <p class="eyebrow">Leasing · Buildings · Advisory — Abu Dhabi</p>
         <h1>Your building,<br><em>run properly.</em></h1>
-        <p class="lede">One team for the whole life of a property: daily cleaning, planned and reactive maintenance, leasing and tenant management, and clear advice before you buy, sell or let.</p>
+        <p class="lede">One team for the whole life of a property: leasing and tenant management, daily cleaning, planned and reactive maintenance, and clear advice before you buy, sell or let.</p>
         <div class="hero-cta">
           <a class="btn btn-gold" href="#contact">Request a site visit
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           <a class="btn btn-wa wa-link" href="https://wa.me/971559045645" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.2-.2-.4-.3z"/></svg>WhatsApp</a>
           <a class="btn btn-glass" href="#services">Our services</a>
         </div>
+        <div class="hero-trust"><span>Ejari registration handled</span><span>Rent collected on time</span><span>24/7 maintenance</span></div>
       </div>
 
       <nav class="glass hero-card reveal" aria-label="Services">
         <h2>What can we take off your hands?</h2>
+        <a href="#leasing" class="feat"><span class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="17" cy="24" r="7"/><path d="M24 24h18M36 24v6M41 24v5"/></svg></span><div><b>Lease &amp; management<em class="tag">Core</em></b><span>Leasing, tenants, Ejari, rent</span></div><span class="arrow">→</span></a>
         <a href="#services"><span class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 40h20l-2-18H16z"/><path d="M20 22v-8h8v8M24 14V6"/><path d="M33 10l4-3M35 15h5M33 20l4 3"/></svg></span><div><b>Cleaning</b><span>Towers, villas, offices</span></div><span class="arrow">→</span></a>
         <a href="#services"><span class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M30 8a8 8 0 0 0-9 10L8 31a4 4 0 0 0 6 6l13-13a8 8 0 0 0 10-9l-5 5-5-1-1-5z"/></svg></span><div><b>Maintenance</b><span>AMC, MEP, 24/7 call-outs</span></div><span class="arrow">→</span></a>
-        <a href="#services"><span class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="17" cy="24" r="7"/><path d="M24 24h18M36 24v6M41 24v5"/></svg></span><div><b>Lease &amp; management</b><span>Tenants, Ejari, rent</span></div><span class="arrow">→</span></a>
         <a href="#services"><span class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M8 40V18l10-6v28M18 40V8l14 6v26M32 40V22l8 4v14M6 40h36"/></svg></span><div><b>Consultancy</b><span>Yields, valuation, advice</span></div><span class="arrow">→</span></a>
         <a href="#services"><span class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 42V10h18v32M28 18h10v24M6 42h36"/><path d="M15 16h8M15 22h8M15 28h8"/><path d="M36 4v6M32 6l4 4 4-4"/></svg></span><div><b>Building washing</b><span>Facade, glass, high-rise</span></div><span class="arrow">→</span></a>
       </nav>
@@ -303,10 +354,56 @@ footer b{color:var(--gold-2);font-weight:600}
   <!-- MARQUEE -->
   <div class="marquee" aria-hidden="true">
     <div class="marquee-track">
-      <span>Annual maintenance contracts</span><span>Ejari registration support</span><span>Service charge budgeting</span><span>Residential &amp; commercial</span><span>Facade &amp; glass cleaning</span><span>Tenant screening</span><span>Building &amp; facade washing</span>
-      <span>Annual maintenance contracts</span><span>Ejari registration support</span><span>Service charge budgeting</span><span>Residential &amp; commercial</span><span>Facade &amp; glass cleaning</span><span>Tenant screening</span><span>Building &amp; facade washing</span>
+      <span>Property leasing &amp; management</span><span>Annual maintenance contracts</span><span>Ejari registration support</span><span>Service charge budgeting</span><span>Residential &amp; commercial</span><span>Facade &amp; glass cleaning</span><span>Tenant screening</span><span>Building &amp; facade washing</span>
+      <span>Property leasing &amp; management</span><span>Annual maintenance contracts</span><span>Ejari registration support</span><span>Service charge budgeting</span><span>Residential &amp; commercial</span><span>Facade &amp; glass cleaning</span><span>Tenant screening</span><span>Building &amp; facade washing</span>
     </div>
   </div>
+
+
+  <!-- LEASING SPOTLIGHT -->
+  <section class="block lease" id="leasing">
+    <div class="wrap">
+      <div class="lease-grid">
+        <div class="lease-visual reveal" style="--img:url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=70')" role="img" aria-label="Keys being handed over to a new tenant">
+          <div class="lease-chip glass"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6"><circle cx="17" cy="24" r="7"/><path d="M24 24h18M36 24v6M41 24v5"/></svg>Service 01 · Lease &amp; Management</div>
+          <div class="lease-badge glass">
+            <div><b>Find</b><span>Screened tenants</span></div>
+            <div><b>Register</b><span>Contracts &amp; Ejari</span></div>
+            <div><b>Collect</b><span>Rent &amp; renewals</span></div>
+          </div>
+        </div>
+        <div class="reveal">
+          <p class="eyebrow">Real Estate Lease &amp; Management Services</p>
+          <h2>Let your property. <em>We handle the rest.</em></h2>
+          <p class="intro">From the first viewing to the yearly renewal, we lease your apartments, villas, offices and shops and manage them afterwards, so rent arrives on time and you never chase a tenant.</p>
+          <div class="lease-cols">
+            <div><h3>Leasing</h3><ul>
+              <li>Pricing at the right market rent</li>
+              <li>Photos, listings and viewings</li>
+              <li>Tenant screening and references</li>
+              <li>Tenancy contracts and Ejari</li></ul></div>
+            <div><h3>Management</h3><ul>
+              <li>Rent collection and cheque tracking</li>
+              <li>Renewals, notices and move-outs</li>
+              <li>Repairs through our own maintenance team</li>
+              <li>Monthly owner statements</li></ul></div>
+          </div>
+          <div class="lease-cta">
+            <a class="btn btn-gold" href="#contact" data-service="Real Estate Lease &amp; Management">List your property
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="btn btn-dark" href="#contact" data-service="Real Estate Lease &amp; Management">Ask about management fees</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="ptypes">
+        <a class="ptype reveal" href="#contact" data-service="Real Estate Lease &amp; Management" style="--img:url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=70')"><i>→</i><b>Apartments</b><span>Studios to penthouses</span></a>
+        <a class="ptype reveal" href="#contact" data-service="Real Estate Lease &amp; Management" style="--img:url('https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=70')"><i>→</i><b>Villas</b><span>Villas and townhouses</span></a>
+        <a class="ptype reveal" href="#contact" data-service="Real Estate Lease &amp; Management" style="--img:url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=70')"><i>→</i><b>Offices</b><span>Fitted and shell &amp; core</span></a>
+        <a class="ptype reveal" href="#contact" data-service="Real Estate Lease &amp; Management" style="--img:url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=70')"><i>→</i><b>Retail</b><span>Shops and showrooms</span></a>
+      </div>
+    </div>
+  </section>
 
   <!-- SERVICES -->
   <section class="block" id="services">
@@ -320,8 +417,22 @@ footer b{color:var(--gold-2);font-weight:600}
       </div>
 
       <div class="services">
-        <article class="svc dark photo reveal" style="--img:url('https://images.unsplash.com/photo-1775809675685-6b8e9cfc9c96?auto=format&fit=crop&w=1200&q=70')">
+
+        <article class="svc dark photo reveal" style="--img:url('https://images.unsplash.com/photo-1741156386380-0236c72eb6f9?auto=format&fit=crop&w=1200&q=70')">
           <span class="num" aria-hidden="true">01</span>
+          <div class="svc-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="17" cy="24" r="7"/><path d="M24 24h18M36 24v6M41 24v5"/></svg></div>
+          <h3>Real Estate Lease &amp; Management Services</h3>
+          <p>We lease your units and manage them afterwards, so you get rent on time without handling tenants day to day.</p>
+          <ul>
+            <li>Marketing, viewings and tenant screening</li>
+            <li>Tenancy contracts and Ejari registration</li>
+            <li>Rent collection, cheque tracking and renewals</li>
+            <li>Owner statements and service charge management</li>
+          </ul>
+          <a class="btn btn-gold" href="#leasing" style="align-self:flex-start;margin-top:6px">See how leasing works</a>
+        </article>
+        <article class="svc dark photo reveal" style="--img:url('https://images.unsplash.com/photo-1775809675685-6b8e9cfc9c96?auto=format&fit=crop&w=1200&q=70')">
+          <span class="num" aria-hidden="true">02</span>
           <div class="svc-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 40h20l-2-18H16z"/><path d="M20 22v-8h8v8"/><path d="M24 14V6"/><path d="M33 10l4-3M35 15h5M33 20l4 3"/></svg></div>
           <h3>Buildings Cleaning Services</h3>
           <p>Scheduled and one-off cleaning for towers, villas, offices and retail units, delivered by trained, uniformed crews.</p>
@@ -334,7 +445,7 @@ footer b{color:var(--gold-2);font-weight:600}
         </article>
 
         <article class="svc dark photo reveal" style="--img:url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1200&q=70')">
-          <span class="num" aria-hidden="true">02</span>
+          <span class="num" aria-hidden="true">03</span>
           <div class="svc-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M30 8a8 8 0 0 0-9 10L8 31a4 4 0 0 0 6 6l13-13a8 8 0 0 0 10-9l-5 5-5-1-1-5z"/></svg></div>
           <h3>Buildings Maintenance</h3>
           <p>Planned preventive maintenance and fast reactive repairs that keep systems running and tenants comfortable.</p>
@@ -343,19 +454,6 @@ footer b{color:var(--gold-2);font-weight:600}
             <li>Electrical, plumbing and MEP works</li>
             <li>Painting, carpentry and civil repairs</li>
             <li>Annual maintenance contracts (AMC) with emergency call-out</li>
-          </ul>
-        </article>
-
-        <article class="svc dark photo reveal" style="--img:url('https://images.unsplash.com/photo-1741156386380-0236c72eb6f9?auto=format&fit=crop&w=1200&q=70')">
-          <span class="num" aria-hidden="true">03</span>
-          <div class="svc-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="17" cy="24" r="7"/><path d="M24 24h18M36 24v6M41 24v5"/></svg></div>
-          <h3>Real Estate Lease &amp; Management Services</h3>
-          <p>We lease your units and manage them afterwards, so you get rent on time without handling tenants day to day.</p>
-          <ul>
-            <li>Marketing, viewings and tenant screening</li>
-            <li>Tenancy contracts and Ejari registration</li>
-            <li>Rent collection, cheque tracking and renewals</li>
-            <li>Owner statements and service charge management</li>
           </ul>
         </article>
 
@@ -425,7 +523,7 @@ footer b{color:var(--gold-2);font-weight:600}
           <h2 style="font-size:clamp(2.3rem,5vw,3.8rem);margin-top:16px">Less chasing. <em>More certainty.</em></h2>
         </div>
         <div class="why-list">
-          <div class="why-item reveal"><i>i.</i><div><b>One contract</b><p>Cleaning, maintenance, leasing and advice under one agreement and one invoice.</p></div></div>
+          <div class="why-item reveal"><i>i.</i><div><b>One contract</b><p>Leasing, cleaning, maintenance and advice under one agreement and one invoice.</p></div></div>
           <div class="why-item reveal"><i>ii.</i><div><b>Named manager</b><p>A single account manager who knows your building and answers your calls.</p></div></div>
           <div class="why-item reveal"><i>iii.</i><div><b>Clear reporting</b><p>Monthly statements with photos, job logs and rent status for every unit.</p></div></div>
         </div>
@@ -468,9 +566,9 @@ footer b{color:var(--gold-2);font-weight:600}
         <div class="field full"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email"></div>
         <div class="field"><label for="f-service">Service needed</label>
           <select id="f-service" name="service">
+            <option selected>Real Estate Lease &amp; Management</option>
             <option>Buildings Cleaning Services</option>
             <option>Buildings Maintenance</option>
-            <option>Real Estate Lease &amp; Management</option>
             <option>Real Estate Consultancy</option>
             <option>Building Washing</option>
             <option>More than one service</option>
@@ -478,6 +576,7 @@ footer b{color:var(--gold-2);font-weight:600}
         </div>
         <div class="field"><label for="f-type">Property type</label>
           <select id="f-type" name="type">
+            <option>Apartment</option>
             <option>Residential tower</option>
             <option>Villa / townhouse</option>
             <option>Office / commercial</option>
@@ -502,7 +601,7 @@ footer b{color:var(--gold-2);font-weight:600}
 <footer>
   <div class="wrap">
     <span>© <span id="yr">2026</span> <b>One Place</b> Real Estate &amp; Gen. Maint. L.L.C, S.P.C. All rights reserved.</span>
-    <span>Cleaning · Maintenance · Leasing · Consultancy</span>
+    <span>Leasing · Cleaning · Maintenance · Consultancy</span>
   </div>
 </footer>
 
@@ -582,6 +681,9 @@ function buildWa(){
     qf.message.value.trim() && `Details: ${qf.message.value.trim()}`].filter(Boolean);
   waForm.href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(lines.join('\n'))}`;
 }
+document.querySelectorAll('[data-service]').forEach(a => a.addEventListener('click', () => {
+  const v = a.dataset.service; [...qf.service.options].forEach(o => { if (o.text === v) qf.service.value = o.value; }); buildWa();
+}));
 qf.addEventListener('input', buildWa); qf.addEventListener('change', buildWa); buildWa();
 
 // Quote form: no email backend, so Enter/submit opens the prefilled WhatsApp chat
