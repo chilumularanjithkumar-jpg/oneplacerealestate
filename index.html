@@ -12,7 +12,7 @@
 <meta property="og:description" content="Real estate lease & management, building cleaning and washing, maintenance and consultancy in Abu Dhabi, UAE.">
 <meta property="og:image" content="https://images.unsplash.com/photo-1603565095944-2a6f33bb517c?auto=format&fit=crop&w=1200&q=70">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"One Place Real Estate & Gen. Maint. L.L.C, S.P.C","url":"https://www.oneplacerealestate.ae/","telephone":"+97126274600","email":"oneplacerealestate2025@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Building No. C94, Office M04, Sabiya ME 10","addressLocality":"Abu Dhabi","addressCountry":"AE"},"areaServed":"United Arab Emirates","openingHours":"Su-Th 08:00-18:00"}</script>
-<meta name="theme-color" content="#060709">
+<meta name="theme-color" content="#f5f7fb">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&family=Oswald:wght@500;600&family=Noto+Kufi+Arabic:wght@400;600;700&display=swap">
@@ -139,7 +139,7 @@ section.block{position:relative;padding-block:clamp(80px,11vw,140px)}
 
 /* About */
 .about{overflow:hidden;background:#000}
-.about-media{position:absolute;inset:0 48% 0 0;background:#0d1018 url('https://images.unsplash.com/photo-1613835579153-9bfe32e50da6?auto=format&fit=crop&w=1400&q=70') center/cover no-repeat;-webkit-mask-image:linear-gradient(90deg,#000 35%,transparent 100%);mask-image:linear-gradient(90deg,#000 35%,transparent 100%);opacity:.9}
+.about-media{position:absolute;inset:0 48% 0 0;background:#dfe7f2 url('https://images.unsplash.com/photo-1613835579153-9bfe32e50da6?auto=format&fit=crop&w=1400&q=70') center/cover no-repeat;-webkit-mask-image:linear-gradient(90deg,#000 35%,transparent 100%);mask-image:linear-gradient(90deg,#000 35%,transparent 100%);opacity:.9}
 .about-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(47,180,255,.12),rgba(0,0,0,.25))}
 .about-grid{position:relative;display:grid;grid-template-columns:.85fr 1.15fr;gap:40px}
 .about-copy{grid-column:2}
@@ -388,6 +388,97 @@ footer .ar{color:rgba(255,255,255,.45)}
 .pill-core .pill-n{background:var(--c4)}
 @media (max-width:900px){.spot-grid{grid-template-columns:1fr}}
 @media (max-width:440px){.spot-steps{grid-template-columns:1fr}}
+
+
+/* ===== Light theme for content sections (hero, marquee, CTA and footer stay dark) ===== */
+:root{--bg:#f5f7fb;--bg2:#eef2f9;--panel:#ffffff;--text:#121826;--muted:#566074;--dim:#8a93a6;--line:rgba(18,24,38,.1);color-scheme:light}
+.hero,.cta,footer,.marquee{--text:#f4f6fb;--muted:rgba(244,246,251,.64);--dim:rgba(244,246,251,.38);--line:rgba(255,255,255,.09);color:var(--text)}
+.tab{color:#fff}
+
+/* Header: transparent over the dark hero, white glass once scrolled */
+header.top{color:#fff}
+header.top.scrolled,header.top.open{background:rgba(255,255,255,.96);color:var(--text);box-shadow:0 1px 0 var(--line),0 10px 30px -18px rgba(18,24,38,.35)}
+header.top.scrolled .brand-name small,header.top.open .brand-name small{color:var(--muted)}
+header.top.scrolled .nav-links a,header.top.open .nav-links a{color:var(--muted)}
+header.top.scrolled .nav-links a:hover{color:var(--text)}
+header.top.scrolled .btn-ghost,header.top.open .btn-ghost{color:var(--text);border-color:rgba(18,24,38,.18);background:#fff}
+header.top.scrolled .menu-btn,header.top.open .menu-btn{color:var(--text);border-color:rgba(18,24,38,.18);background:#fff}
+
+/* Buttons on light sections */
+main section:not(.hero):not(.cta) .btn-ghost{color:var(--text);background:#fff;border-color:rgba(18,24,38,.16);box-shadow:0 10px 24px -16px rgba(18,24,38,.4)}
+main section:not(.hero):not(.cta) .btn-ghost:hover{border-color:var(--c3);color:var(--c3)}
+
+/* Stats */
+.stats.bgimg{--bg-o:.16;background:#fff}
+.stats.bgimg::after{background:linear-gradient(180deg,rgba(255,255,255,.75),rgba(255,255,255,.9))}
+.stat{border-color:var(--line)}
+
+/* Leasing spotlight */
+.spot{--bg-o:.55;background:var(--bg)}
+.spot.bgimg::after{background:linear-gradient(90deg,rgba(245,247,251,.98) 0%,rgba(245,247,251,.9) 45%,rgba(245,247,251,.45) 100%),linear-gradient(180deg,var(--bg) 0%,transparent 16%,transparent 84%,var(--bg) 100%)}
+.spot-ar{color:var(--muted)}
+.spot-intro{color:#2f3747}
+.spot-step{background:rgba(255,255,255,.88);border-color:rgba(255,255,255,.9);box-shadow:0 24px 48px -28px rgba(18,24,38,.45)}
+.spot-step span{color:#fff}
+.spot-step p{color:var(--muted)}
+.spot-step:hover{border-color:rgba(155,63,224,.5)}
+
+/* About */
+.about{background:#fff}
+.about-media{opacity:1}
+.about-media::after{background:linear-gradient(90deg,rgba(47,180,255,.10),rgba(255,255,255,.05))}
+.about-copy .txt{color:#2f3747}
+.about-copy strong{color:var(--text)}
+.about .vm p{color:var(--muted)}
+
+/* Services list */
+.svc-index{background:radial-gradient(700px 480px at 0% 40%,rgba(47,180,255,.14),transparent 60%),radial-gradient(700px 480px at 100% 80%,rgba(232,55,138,.10),transparent 60%),var(--bg)}
+.index-photo{box-shadow:0 40px 70px -40px rgba(18,24,38,.6)}
+.index-photo .cap b{color:#fff}
+.index-photo .cap span{color:rgba(255,255,255,.8)}
+.pill-n,.pill-b{color:#fff}
+.pill-n{box-shadow:0 10px 20px -10px rgba(18,24,38,.5)}
+.pill-b{box-shadow:0 14px 28px -20px rgba(18,24,38,.6)}
+
+/* Service details */
+.features{background:radial-gradient(900px 600px at 100% 15%,rgba(155,63,224,.08),transparent 60%),radial-gradient(900px 600px at 0% 85%,rgba(47,180,255,.09),transparent 60%),#fff}
+.features.bgimg{--bg-o:.1}
+.features.bgimg::after{background:linear-gradient(180deg,#fff 0%,rgba(255,255,255,.7) 18%,rgba(255,255,255,.7) 82%,#fff 100%)}
+.big-num{background:linear-gradient(180deg,rgba(18,24,38,.55),rgba(18,24,38,.07));-webkit-background-clip:text;background-clip:text}
+.dash{color:#2f3747}
+.feat .more{color:var(--text)}
+.frame{border-color:#fff;box-shadow:0 0 0 1px var(--line),0 40px 70px -36px rgba(18,24,38,.55)}
+.frame .tag{color:#fff}
+.ptype{color:#fff;box-shadow:0 0 0 1px var(--line),0 30px 50px -30px rgba(18,24,38,.55)}
+
+/* Process */
+.process-wrap.bgimg{--bg-o:.12;background:var(--bg2)}
+.process-wrap.bgimg::after{background:linear-gradient(180deg,var(--bg2) 0%,rgba(238,242,249,.78) 30%,rgba(238,242,249,.78) 70%,var(--bg2) 100%)}
+.step .dot{box-shadow:0 14px 30px -16px rgba(155,63,224,.6)}
+.process::before{opacity:.8}
+
+/* Why choose us */
+.why.bgimg{--bg-o:.08;background:#fff}
+.why.bgimg::after{background:radial-gradient(ellipse at center,rgba(255,255,255,.4),#fff 75%)}
+.why-card{box-shadow:0 0 0 1px var(--line),0 24px 44px -26px rgba(18,24,38,.45)}
+.why-n{box-shadow:0 0 0 7px rgba(155,63,224,.08),0 16px 30px -12px rgba(18,24,38,.45),inset 0 -6px 12px rgba(0,0,0,.06)}
+.why-core::before{border-left-color:rgba(18,24,38,.45)}
+.why-core::after{border-right-color:rgba(18,24,38,.45)}
+.why-core .dotp{background:var(--grad-d);box-shadow:0 0 0 5px rgba(155,63,224,.14)}
+.why-words{color:rgba(18,24,38,.2)}
+.why .tagline{color:var(--text)}
+
+/* Contact */
+.contact.bgimg{--bg-o:.14;background:var(--bg)}
+.contact.bgimg::after{background:linear-gradient(90deg,var(--bg) 10%,rgba(245,247,251,.82) 55%,rgba(245,247,251,.9) 100%)}
+.contact-mark{opacity:.09}
+.cblock p,.cblock a{color:var(--muted);font-weight:400}
+.cblock a:hover{color:var(--text)}
+.lines svg{color:var(--c3)}
+form{background:#fff;border-color:var(--line);box-shadow:0 40px 80px -40px rgba(18,24,38,.45)}
+input,select,textarea{color:var(--text);background:#f5f7fb;border-color:rgba(18,24,38,.12)}
+select option{background:#fff;color:var(--text)}
+input::placeholder,textarea::placeholder{color:rgba(18,24,38,.38)}
 
 /* Reveal */
 .js .reveal{opacity:0;transform:translateY(34px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
